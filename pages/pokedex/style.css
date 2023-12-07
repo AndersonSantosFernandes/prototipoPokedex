@@ -170,7 +170,7 @@ body {
 }
 .pokebola{
     width: 100%;
-    animation: girar 5s infinite;
+    animation: girar 2s linear infinite;
 }
 
 @keyframes girar {
