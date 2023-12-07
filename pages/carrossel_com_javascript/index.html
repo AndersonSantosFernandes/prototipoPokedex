@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini carrossel</title>
+</head>
+<style>
+    body{
+        background-image: url("./img/friends.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+     
+    }
+    .geral {
+        width: 350px;
+        height: 300px;
+        /* border: 1px solid black; */
+        margin: 60px auto;
+        padding: 3px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 0px 0px 15px purple;
+        opacity: .4;
+        transition: all 1s;
+    }
+    .geral:hover{
+        opacity: 1;
+    }
+
+    .imagens {
+        width: max-content;
+        height: 300px;
+        /* border: 1px solid purple; */
+        display: flex;
+        margin-left: 0;
+        transition: all 1s;
+    }
+
+    .return__imgs {
+        width: 350px;
+        height: 298px;
+        /* border: 1px solid green; */
+        background-color: aqua;
+        margin-right: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .return__imgs1 {
+        width: 350px;
+        height: 298px;
+        /* border: 1px solid rgb(0, 60, 128); */
+        background-color: rgb(255, 0, 221);
+        margin-right: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn__geral {
+        border: none;
+        background: transparent;
+        font-size: 60px;
+        font-weight: bold;
+        color: rgb(163, 169, 173);
+        opacity: .4;
+        cursor: pointer;
+        position: absolute;
+        top: 40%;
+        transition: all 1s;
+    }
+
+    .btn__geral:hover {
+        opacity: 1;
+        text-shadow: 0px 0px 6px gold;
+    }
+
+    #vai {
+        left: 87%;
+    }
+    #volta{
+        display: none;
+    }
+    .fotos{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <h1 style="color: white;">Carrossel com JavaScript  <a href="../../index.html">Inicio</a></h1>
+    <div class="geral">
+        <div id="imagens" class="imagens">
+            <div class="return__imgs">                
+                <img class="fotos" src="./img/001.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/002.png" alt="">
+            </div>
+            <div class="return__imgs">
+                <img class="fotos" src="./img/003.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/004.png" alt="">
+            </div>
+            <div class="return__imgs">
+                <img class="fotos" src="./img/006.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/007.png" alt="">
+            </div>
+            <div class="return__imgs">
+                <img class="fotos" src="./img/008.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/009.png" alt="">
+            </div>
+            <div class="return__imgs">
+                <img class="fotos" src="./img/010.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/011.png" alt="">
+            </div>
+            <div class="return__imgs">
+                <img class="fotos" src="./img/013.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/025.png" alt="">
+            </div>
+            <div class="return__imgs">
+                <img class="fotos" src="./img/133.png" alt="">
+            </div>
+            <div class="return__imgs1">
+                <img class="fotos" src="./img/658.png" alt="">
+            </div>
+
+        </div>
+
+        <button id="vai" class="btn__geral" onclick="avanca()"> > </button>
+        <button id="volta" class="btn__geral" onclick="volta()"> < </button>
+
+    </div>
+    <script>
+        // Calculo de avanço 
+        // Com essas cinco linha é possível parametrizar o avanco 
+        //de acordo com o número de slides, largura da imagem e margem esquerda
+        //O avanço muda a margem esquerda 
+        //O limite faz o seta sumir ao chegar no primeiro ou ultimo slide
+
+        numero__de__slides = 14
+        largura__imagem = 350
+        margem__esquerda = 3
+        avanco = largura__imagem + margem__esquerda
+        limite = (avanco * (numero__de__slides - 1))*-1
+
+        console.log(limite)
+
+        margin__left = 0
+        function avanca() {
+
+
+            imagens = document.getElementById("imagens")
+            btn__vai = document.getElementById("vai")
+            btn__volta = document.getElementById("volta")
+            margin__left = margin__left - avanco
+
+            imagens.style.marginLeft = `${margin__left}px`
+
+            if (margin__left <= limite) {
+                btn__vai.style.display = "none"
+            }
+            btn__volta.style.display = "block"
+            
+        }
+        function volta() {
+
+
+            imagens = document.getElementById("imagens")
+            btn__volta = document.getElementById("volta")
+            margin__left = margin__left + avanco
+
+            imagens.style.marginLeft = `${margin__left}px`
+
+            btn__vai.style.display = "block"
+            if (margin__left >= 0) {
+                btn__volta.style.display = "none"
+            }
+            
+        }
+
+    </script>
+
+</body>
+
+</html>
