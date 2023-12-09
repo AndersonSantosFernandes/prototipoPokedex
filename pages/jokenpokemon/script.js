@@ -7,7 +7,7 @@ let url = 'https://pokeapi.co/api/v2/pokemon/';
 bichinhos = [3, 4, 15, 19, 31, 59, 5, 6, 25, 26, 33, 77, 150, 133, 614, 645, 652, 663,658,689,675]
 
 // console.log(bichinhos.length)
-// inicio foreach
+// inicio foreach 
 bichinhos.forEach(function (monstrinhos) {
     // console.log(monstrinhos)
 
@@ -71,25 +71,25 @@ function escolher(id) {
     var escolherOponente = Number.parseInt(Math.random() * 10 + 1)
    
     if(escolherOponente == 1){
-        idOponente = 1
+        idOponente = 115
     }else if(escolherOponente == 2){
-        idOponente = 119
+        idOponente = 142
     }else if(escolherOponente == 3){
-        idOponente = 111
+        idOponente = 112
     }else if(escolherOponente == 4){
-        idOponente = 126
+        idOponente = 160
     }else if(escolherOponente == 5){
-        idOponente = 144
+        idOponente = 655
     }else if(escolherOponente == 6){
-        idOponente = 199
+        idOponente = 697
     }else if(escolherOponente == 7){
-        idOponente = 500
+        idOponente = 612
     }else if(escolherOponente == 8){
-        idOponente = 553
+        idOponente = 621
     }else if(escolherOponente == 9){
-        idOponente = 507
+        idOponente = 748
     }else if(escolherOponente == 10){
-        idOponente = 530
+        idOponente = 812
     }
 
     var oponentes = url + idOponente + "/"

@@ -1,0 +1,32 @@
+/* Configuração padrao das páginas */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+    background-image: url("../../img/2.png");
+    background-size: 100%;
+    background-repeat: 2;
+}
+
+.container {
+    position: relative;
+}
+
+.imagem-de-fundo {
+    width: 100%; 
+    height: 30vh;
+
+}
+
+.imagem-sobreposta {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+
+}
