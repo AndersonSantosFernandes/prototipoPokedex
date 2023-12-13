@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
- 
-<head>
-    <!--Link bootstrap-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.css"
-        integrity="sha512-drnvWxqfgcU6sLzAJttJv7LKdjWn0nxWCSbEAtxJ/YYaZMyoNLovG7lPqZRdhgL1gAUfa+V7tbin8y+2llC1cw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    
+<head>
+   
     <link rel="stylesheet" type="text/css" href="../../css/main.css">
     <link rel="stylesheet" href="./cssJokenpo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +13,9 @@
 
     <title>Site_POKEMON_HOME</title>
 
-
 </head>
-
+ 
 <body>
-
 
     <header class="header">
         <div class="logo">
@@ -33,26 +26,23 @@
 
     <nav class="menu">
         <ul>
-            
+
             <li><a href="../pokedex/pokedex.html">Pokedex</a></li>
-        
-           
-         </ul>
+
+        </ul>
     </nav>
 
-    <main class="cards">
+    <main >
         <div class="container__jokenpo">
             <section class="sessao__pagina__jokenpo">
                 <h1 class="titulo__pokemon">JOKENPOKEMON</h1>
-                <div id="pokemon__lista">
+                <div id="pokemon__lista" style="display: nogne;">
                     <!-- Aqui aparece os personagens vindos pelo javascript -->
-
-                    
                 </div>
 
-                <div class="row" id="show__game">
+                <div class="show__game" id="show__game">
                     <!-- Jogador -->
-                    <div class="col-md-4 jogador centralizar">
+                    <div class="jogador">
                         <div class="falas">
                             <div id="fala__jogador">
                                 <!-- aqui aparece a fala do jogador -->
@@ -65,7 +55,7 @@
                         </div>
                     </div>
                     <!-- Jogo -->
-                    <div class="col-md-4 jogando centralizar central">
+                    <div class=" pontuacao ">
 
                         <div id="acao__de__jogo">
                             <!-- Botões que realizam aposta enviando o valor escolhido pela função onclick -->
@@ -73,10 +63,10 @@
                                 <img class="img__aposta" src="./imgjokenpo/pedra.png" alt="pedra">
                             </button>
                             <button class="btn__aposta" onclick="apostar('papel')">
-                                <img class="img__aposta"src="./imgjokenpo/papel.png" alt="papel">
+                                <img class="img__aposta" src="./imgjokenpo/papel.png" alt="papel">
                             </button>
                             <button class="btn__aposta" onclick="apostar('tesoura')">
-                                <img class="img__aposta"src="./imgjokenpo/tesoura.png" alt="tesoura">
+                                <img class="img__aposta" src="./imgjokenpo/tesoura.png" alt="tesoura">
                             </button>
                         </div>
                         <div id="retorno__aposta">
@@ -84,7 +74,7 @@
                                 <!-- Imagem apostada pelo jogador -->
                             </div>
                             <div class="resutados__aposta" id="retorno__pontos__aposta">
-                                <h1> X </h1>                                
+                                <h1> X </h1>
                             </div>
                             <div class="resutados__aposta" id="retorno__aposta__oponente">
                                 <!-- Imagem apostada pelo oponente -->
@@ -95,7 +85,7 @@
                                 <h2 id="soma__pontos__jogador"></h2>
                             </span>
                             <span class="pontos__jogador__oponente">
-                                <h2> VS </h2>                                
+                                <h2> VS </h2>
                             </span>
                             <span class="pontos__jogador__oponente">
                                 <h2 id="soma__pontos__oponente"></h2>
@@ -106,7 +96,7 @@
                         </div>
                     </div>
                     <!-- Oponente -->
-                    <div class="col-md-4 oponente centralizar">
+                    <div class="oponente ">
                         <div class="falas">
                             <div id="fala__oponente">
                                 <!-- aqui aparece a fala do oponente -->
@@ -118,19 +108,20 @@
                             </div>
                         </div>
                     </div>
-                  
+
                 </div>
 
             </section>
             <br>
         </div>
+       
     </main>
     <footer class="rodape">
 
-   <h5>&#169;Anderson Fernandes</h5>
-   <div id="audio">
-    <!-- Aqui aparece o player de adio ao iniciar o jokenpo com a função "escolher()" vindo pelo JS -->
-   </div>
+        <h5>&#169;Anderson Fernandes</h5>
+        <div id="audio">
+            <!-- Aqui aparece o player de adio ao iniciar o jokenpo com a função "escolher()" vindo pelo JS -->
+        </div>
 
     </footer>
     <script src="./script.js"></script>

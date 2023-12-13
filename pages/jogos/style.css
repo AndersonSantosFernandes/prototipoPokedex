@@ -1,0 +1,126 @@
+/* Configuração padrao das páginas */
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vw;
+    background-image: url("../../img/2.png");
+    background-size: 100%;
+    background-repeat: 2;
+}
+
+.container {
+    position: relative;
+}
+
+.imagem-de-fundo { 
+    width: 100%; 
+    height: 30vh;
+
+}
+
+.imagem-sobreposta {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+
+}
+/* CSS unico da página jogos */
+.titulo__pagina{
+    text-align: center;
+    padding: 30px;
+    font-size: 50px;
+}
+.todos__jogos{
+    width: 80%;
+    margin: 20px auto;
+    /* border: 1px solid purple; */
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 20px;
+}
+
+.selecionar__jogo{
+    width: 500px;
+    height: 350px;
+    /* border: 1px solid black; */
+    background-image: linear-gradient(red, white, gray);
+    border-radius: 30px;
+}
+
+.selecionar__jogo a{
+    text-decoration: none;
+}
+
+.jogo__imagem{
+    width: 100%;
+    height: 80%;
+    border-radius: 30px;
+}
+.titulo__jogo{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo__jogo p{
+    color:#000000;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 900;
+    -webkit-text-stroke-width: 0.1px; 
+    -webkit-text-stroke-color: #ffffff; 
+    text-decoration: none;
+    transition:background-color 400ms;  
+
+}
+.titulo__pagina{    
+    color:#000000;
+    font-size: 49px;
+    text-transform: uppercase;
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 900;
+    -webkit-text-stroke-width: 0.1px; 
+    -webkit-text-stroke-color: #ffffff; 
+    text-decoration: none;
+    transition:background-color 400ms;  
+}
+
+
+/* Responsividade */
+
+@media(max-width: 600px){
+
+    .imagem-de-fundo {
+        width: 100%; 
+        height: 15vh;
+
+    }
+    .imagem-sobreposta {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 180px;
+        height: 10vh;
+    }
+
+    .container{
+        width: 100%;
+    }
+
+    .todos__jogos{
+        width: 98%;
+        margin: 10px auto;
+    }
+
+
+
+}

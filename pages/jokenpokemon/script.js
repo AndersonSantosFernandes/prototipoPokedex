@@ -4,11 +4,11 @@
 let url = 'https://pokeapi.co/api/v2/pokemon/';
 
 
-bichinhos = [3, 4, 15, 19, 31, 59, 5, 6, 25, 26, 33, 77, 150, 133, 614, 645, 652, 663,658,689,675]
+bichinhos = [3, 4, 15, 19, 31, 59, 5, 6, 25, 26, 33, 77, 150, 483, 133, 614, 645, 652, 663,658,689,675]
 
 // console.log(bichinhos.length)
 // inicio foreach 
-bichinhos.forEach(function (monstrinhos) {
+bichinhos.forEach(function (monstrinhos) { 
     // console.log(monstrinhos)
 
     var retorno = url + monstrinhos + "/"
@@ -42,7 +42,7 @@ function escolher(id) {
 
     document.getElementById("audio").innerHTML=
     `
-    <audio id="music" controls preload="auto" autoplay>
+    <audio id="music" style="height:30px;" controls preload="auto" autoplay>
     <source src="audio/01 - Pokémon Thema.mp3" type = "audio/mpeg">
     </audio>
     `
@@ -119,7 +119,7 @@ function escolher(id) {
     esconder.style.display = "none"
 
     var showGame = document.getElementById("show__game")
-    showGame.style.display = "flex"
+    showGame.style.display = "grid"
 
 }
 function sairDoJogo(){

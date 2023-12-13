@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="../../css/main-mobile.css">
+    <link rel="stylesheet" type="text/css" href="../../css/main.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Site_POKEMON_HOME</title>
+
+
+</head>
+
+<body>
+
+
+    <header class="header">
+        <div class="logo">
+            <img src="../../img/charizardwall.png" width="100%" alt="Imagem de Fundo" class="imagem-de-fundo">
+            <img src="../../img/LOGO.png" width="200" alt="Imagem Sobreposta" class="imagem-sobreposta">
+        </div>
+    </header>
+
+    <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+        menu
+    </span>
+
+    <nav  id="itens" class="menu">
+        <ul>
+            <li><a href="../../index.html">HOME</a></li>
+            <li><a href="../pokedex/pokedex.html">POKEDEX</a></li>
+            <li><a href="../aplicativos/aplicativos.html">APLICATIVOS</a></li>
+            <li><a href="../animes/animes.html">ANIMES</a></li>
+            <li><a href="../jogos/jogos.html">JOGOS</a></li>              
+           
+         </ul>
+    </nav> 
+
+    <!-- li*5>a> -->
+    <main class="cards">
+        <section class="container">
+
+            <h1 class="titulo__pagina">Selecione um jogo...</h1>
+            <nav class="jogos">
+                <ul class="todos__jogos" >
+                    <li class="selecionar__jogo"><a href="../jokenpokemon/jokenpokemon.html"><img class="jogo__imagem" src="./imgs/jogo.png" alt=""><span class="titulo__jogo"><p>Jokenpokemon</p></span></a></li>
+                    <!-- <li class="selecionar__jogo"><a href=""></a></li>
+                    <li class="selecionar__jogo"><a href=""></a></li> -->
+          
+                </ul>
+            </nav>
+ 
+        </section>
+    </main>
+   
+</body>
+<script>
+    function clickMenu(){
+        if (itens.style.display == 'block'){
+            itens.style.display='none'
+        } else{
+            itens.style.display = 'block'
+        }
+        
+
+    }
+</script>
+
+</html>
