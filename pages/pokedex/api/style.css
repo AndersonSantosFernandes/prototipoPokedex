@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Titillium Web', Courier, monospace;
+}
+
+header {
+    width: 90%;
+    height: 10vh;
+    background-color: black;
+    margin: auto;
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.container {
+    width: 90%;
+    min-height: 90vh;
+    background-color: aquamarine;
+    margin: auto;
+    display: flex;
+}
+
+section {
+    width: 65%;
+    background-color: rgb(241, 166, 139);
+}
+
+aside {
+    width: 35%;
+    background-color: bisque;
+}
+
+#mostra__informacoes {
+    width: 95%;
+
+    padding: 15px;
+}
+
+.pais {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+#seleciona__paises {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    flex-direction: column;
+}
+
+#seleciona__paises select {
+    width: 90%;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 22px;
+    margin: auto;
+
+}
+
+.fonte {
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px 10px;
+    text-indent: 20px;
+}
+.bandeiras{
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.bandeira, .brasao{
+    width: 48%;
+    height: 270px;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+.flag{
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width:500px) {
+    .container {
+        display: block;
+    }
+
+    section {
+        width: 100%;
+        background-color: rgb(241, 166, 139);
+    }
+
+    aside {
+        width: 100%;
+        background-color: bisque;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+}

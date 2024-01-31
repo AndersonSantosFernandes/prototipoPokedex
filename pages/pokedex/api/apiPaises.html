@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Using select 2 -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Using select 2 -->
+
+    <link rel="stylesheet" href="style.css">
+    <title>Países do mundo</title>
+</head>
+
+<body>
+    <header>
+
+        <h1>Informações de todos os países</h1>
+    </header>
+
+    <div class="container">
+
+        <section>
+
+            <hr>
+            <div id="mostra__informacoes">
+
+            </div>
+        </section>
+        <aside>
+            <div id="seleciona__paises">
+
+                <label for="seletor">Selecione um país</label>
+                <br>
+                <select name="" id="seletor" onchange="buscarPais(value)">
+                    
+                </select>
+            </div>
+            <div class="fonte">
+                <h3>
+                    Desafio obrigatório do curso de desenvlovimento web na
+                    plataforma CoderHouse
+                </h3>
+                <p>
+                    O desafio consiste em criar um sistema simple para consumo de um API
+                    pública, onde o site escolhido foi o do <a href="https://servicodados.ibge.gov.br/api/docs/paises"
+                        target="_blank">IBGE</a> que fornece dados de
+                    vários paíse de todos os continentes.
+                </p>
+                <p>
+                    Através do select é possivel selecionar um país qualque e a logica junto com a API
+                    trás as informações de cada um.
+
+                </p>
+                <p>
+                    O interessante dasta API é que tem a opção de exibir informações históricas
+                    de cada país; para quem gosta de história pode ser uma boa fonte de informação.
+                </p>
+                <p>
+                    A interface possui responsividade
+                    <br>
+                    Sistema criado por Anderson Santos Fernandes atrvés de conhecimentos adquiridos
+                    no curso de dev web da CODERHOUSE.
+                </p>
+            </div>
+        </aside>
+    </div>
+    <script src="./script2.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#seletor').select2();
+
+        });
+
+    </script>
+</body>
+
+</html>

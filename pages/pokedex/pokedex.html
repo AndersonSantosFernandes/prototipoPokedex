@@ -33,11 +33,12 @@
                     <img class="imagem__pokedex" src="../../img/pokedex_esquerdo.png" alt="">
                     <div id="img__pokemon">
                        <!-- Aqui aparece a imagem vinda pelo JS com innerHTML -->
+                       
                     </div>
                     <div id="retorna__nome">
                         Nome
                     </div>
-                    <div id="poderes">
+                    <div id="poderes"> 
                         Poderes
                     </div>
                     <div class="pokebola__girando">
@@ -46,15 +47,21 @@
                 </div>
                 <div class="pokedex__direito">
                     <img class="imagem__pokedex" src="../../img/pokedex_direito.png" alt="">
-                    <input type="text" name="" id="id__nome__pokemon" placeholder="ID/nome" autofocus>
+                   
+                   <select name="" id="id__nome__pokemon" onchange="loadpk(value)">
+                    <!-- <option value="25">Pikachu</option>
+                    <option value="26">Raichu</option> -->
+                   </select>
+                   
+                    <!-- <input type="text" name="" id="id__nome__pokemon" placeholder="ID/nome" autofocus> -->
                     <div id="texto__id">
                         <h3>ID</h3>
                     </div>
                     <div id="numero__id">
                         <!-- Aqui aparece o número do ID -->
                     </div>
-                    <button class="btn__acao__1 btn__style" id="btn" onclick="loadpk('frente')">Frente</button>
-                    <button class="btn__acao__2 btn__style"  onclick="loadpk('costas')">Costas</button>
+                    <button class="btn__acao__1 btn__style" id="btn" onclick="frente()">Frente</button>
+                    <button class="btn__acao__2 btn__style"  onclick="costas()">Costas</button>
                 </div>
             </div>
 
